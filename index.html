@@ -2,7 +2,7 @@ function drawMenu(){
   drawGradientSky();
   drawGround();
   drawText("Flappy Skull 💀",90,190,36,"#fff");
-  drawText("Made by Tanush Satgur",85,230,18,"#facc15",false); // <- visible yellow line
+  drawText("Made by Tanush Satgur",85,230,18,"#facc15",false); // <- visible black line
   const yOffset = Math.sin(Date.now()/300)*6;
   ctx.save();
   ctx.translate(200,320+yOffset);
@@ -23,6 +23,7 @@ function drawOver(){
   drawText("Made by Tanush Satgur",90,370,18,"#facc15",false); // <- shows on Game Over too
   drawText("Tap or Press Space to Restart",30,410,18,"#fff",false);
 }
+
 
 
 
