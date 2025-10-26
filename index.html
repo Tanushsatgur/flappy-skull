@@ -115,7 +115,7 @@ function drawMenu(){
   drawGradientSky();
   drawGround();
   drawText("Flappy Skull 💀",90,190,36,"#fff");
-  drawText("Made by Tanush Satgur",85,230,18,"#000",false); // 🔥 pure black text
+  drawText("Made by Tanush Satgur",85,230,18,"#222",false); // black-gray text
   const yOffset = Math.sin(Date.now()/300)*6;
   ctx.save();
   ctx.translate(200,320+yOffset);
@@ -133,7 +133,7 @@ function drawOver(){
   drawText("Game Over",110,250,36,"#fff");
   drawText("Score: "+score,140,300,26);
   drawText("Best: "+high,150,330,26);
-  drawText("Made by Tanush Satgur",90,370,18,"#000",false); // 🔥 pure black text
+  drawText("Made by Tanush Satgur",90,370,18,"#222",false); // black-gray text
   drawText("Tap or Press Space to Restart",30,410,18,"#fff",false);
 }
 
@@ -168,6 +168,8 @@ loop();
 </script>
 </body>
 </html>
+
+
 
 
 
