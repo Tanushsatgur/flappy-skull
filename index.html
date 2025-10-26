@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title> Flappy skull 💀</title>
+<title>Flappy Skull 💀 | Made by Tanush Satgur</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box;}
   body{
@@ -41,7 +41,7 @@ const bgMusic=document.getElementById("bgMusic");
 const flapSound=document.getElementById("flapSound");
 
 let gameState="menu";
-const bird={x:80,y:260,w:30,h:30,vel:0,grav:0.18,lift:-5}; // 💀 slower gravity + slower lift
+const bird={x:80,y:260,w:30,h:30,vel:0,grav:0.18,lift:-5};
 let pipes=[],frame=0,score=0,high=localStorage.getItem("flappyHigh")||0;
 
 // === DRAW HELPERS ===
@@ -81,12 +81,12 @@ function updateBird(){
   if(bird.y<0)bird.y=0;
 }
 function updatePipes(){
-  if(frame%120===0){ // fewer pipes
+  if(frame%120===0){
     const topH=Math.random()*150+50;
-    pipes.push({x:canvas.width,y:0,h:topH,gap:170,w:80,sc:false}); // thicker poles
+    pipes.push({x:canvas.width,y:0,h:topH,gap:170,w:80,sc:false});
   }
   pipes.forEach(p=>{
-    p.x-=1.3; // slower horizontal speed
+    p.x-=1.3;
     if(!p.sc && p.x+p.w<bird.x){score++;p.sc=true;}
     if(bird.x+bird.w-5>p.x && bird.x+5<p.x+p.w &&
        (bird.y+5<p.h || bird.y+bird.h-5>p.h+p.gap)){
@@ -111,8 +111,8 @@ function startGame(){
 }
 function drawMenu(){
   drawGradientSky();drawGround();
-  drawText("Flappy skull",80,200,32,"#fff");
-  drawText("Flappy 💀",130,250,38,"#fde047");
+  drawText("Flappy Skull 💀",90,210,36,"#fff");
+  drawText("Made by Tanush Satgur",80,250,16,"#facc15",false);
   const yOffset=Math.sin(Date.now()/300)*6;
   ctx.save();
   ctx.translate(200,320+yOffset);
@@ -155,4 +155,5 @@ loop();
 </script>
 </body>
 </html>
+
 
