@@ -166,13 +166,19 @@ canvas.addEventListener("touchstart",flap);
 // === START ===
 bgMusic.volume=0.3;
 loop();
- if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js');
+ // === START ===
+bgMusic.volume = 0.3;
+loop();
+
+// 💀 Register service worker for PWA
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
 }
 
 </script>
 </body>
 </html>
+
 
 
 
