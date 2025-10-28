@@ -4,13 +4,14 @@
   "description": "A fun tap-to-fly skull adventure made by Tanush Satgur.",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#60a5fa",
-  "theme_color": "#60a5fa",
+  "background_color": "#3b82f6",
+  "theme_color": "#3b82f6",
   "icons": [
     {
-      "src": "https://tanushsatgur.github.io/flappy-skull/icon.png",
+      "src": "icon.png",
       "sizes": "192x192",
       "type": "image/png"
     }
   ]
 }
+
